@@ -6,17 +6,32 @@
     <title>Día de Muertos</title>
     <style>
         body {
-            background-color: #a879f5;
+            background-color: #9b59b6; 
             color: white;
             font-family: Arial, sans-serif;
-
-            transition: background-color 0.5s;
+            transition: background-color 2s ease-in-out; 
             text-align: center;
             padding: 20px;
+            animation: changeBackground 10s infinite alternate; 
         }
+
+      
+        @keyframes changeBackground {
+            0% {
+                background-color: #9b59b6; 
+            }
+            50% {
+                background-color: #6a1b9a; 
+            }
+            100% {
+                background-color: #4a148c;
+            }
+        }
+
         h1 {
             font-size: 3em;
         }
+
         nav button {
             background-color: #FFB300;
             color: black;
@@ -28,13 +43,16 @@
             margin: 10px;
             transition: transform 0.2s;
         }
+
         nav button:hover {
             transform: scale(1.1);
             background-color: #FFD54F;
         }
+
         body {
             cursor: url('calaverita.png'), auto; 
         }
+
         .section {
             margin: 50px 0;
             padding: 20px;
@@ -42,17 +60,20 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
         }
+
         .content {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 20px;
         }
+
         .column {
             flex: 1;
             min-width: 250px;
             max-width: 500px;
         }
+
         img {
             width: 100%;
             border-radius: 10px;
@@ -80,7 +101,7 @@
                 <p>Esta tradición ha evolucionado a lo largo de los siglos y se consolidó como una celebración en el siglo XIX, fusionando elementos indígenas y católicos.</p>
             </div>
             <div class="column">
-                <img src="origen.jpg"Origen Día de Muertos">
+                <img src="origen.jpg" alt="Origen Día de Muertos">
             </div>
         </div>
     </div>
@@ -159,11 +180,6 @@
             const section = document.getElementById(sectionId);
             section.scrollIntoView({ behavior: 'smooth' });
         }
-
-        // Iluminar el fondo
-        setInterval(() => {
-            document.body.style.backgroundColor = document.body.style.backgroundColor === 'rgb(255, 111, 0)' ? '#FF6F00' : '#FF6F00';
-        }, 1000);
     </script>
 
 </body>
