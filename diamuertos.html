@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día de Muertos</title>
+    <style>
+        body {
+            background-color: #a879f5;
+            color: white;
+            font-family: Arial, sans-serif;
+
+            transition: background-color 0.5s;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 3em;
+        }
+        nav button {
+            background-color: #FFB300;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+            transition: transform 0.2s;
+        }
+        nav button:hover {
+            transform: scale(1.1);
+            background-color: #FFD54F;
+        }
+        body {
+            cursor: url('calaverita.png'), auto; 
+        }
+        .section {
+            margin: 50px 0;
+            padding: 20px;
+            border: 2px solid white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+        }
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .column {
+            flex: 1;
+            min-width: 250px;
+            max-width: 500px;
+        }
+        img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Día de Muertos</h1>
+    <nav>
+        <button onclick="scrollToSection('origen')">Origen</button>
+        <button onclick="scrollToSection('ofrenda')">Ofrenda</button>
+        <button onclick="scrollToSection('tradiciones')">Tradiciones</button>
+        <button onclick="scrollToSection('calaveras')">Calaveras</button>
+        <button onclick="scrollToSection('celebracion')">Celebración</button>
+        <button onclick="scrollToSection('escalones')">Escalones</button>
+    </nav>
+
+    <div id="origen" class="section">
+        <h2>Origen del Día de Muertos</h2>
+        <div class="content">
+            <div class="column">
+                <p>El Día de Muertos se originó en México y se remonta a las civilizaciones prehispánicas, como los mexicas, quienes rendían culto a sus muertos.</p>
+                <p>Esta tradición ha evolucionado a lo largo de los siglos y se consolidó como una celebración en el siglo XIX, fusionando elementos indígenas y católicos.</p>
+            </div>
+            <div class="column">
+                <img src="origen.jpg"Origen Día de Muertos">
+            </div>
+        </div>
+    </div>
+
+    <div id="ofrenda" class="section">
+        <h2>Ofrenda</h2>
+        <div class="content">
+            <div class="column">
+                <p>La ofrenda es el altar donde se colocan fotos, comida y objetos que el difunto disfrutaba en vida.</p>
+            </div>
+            <div class="column">
+                <img src="ofrendas.jpg" alt="Ofrenda Día de Muertos">
+            </div>
+        </div>
+    </div>
+
+    <div id="tradiciones" class="section">
+        <h2>Tradiciones</h2>
+        <div class="content">
+            <div class="column">
+                <p>Las tradiciones del Día de Muertos incluyen la creación de altares, el uso de calaveras de azúcar y las visitas a los cementerios.</p>
+            </div>
+            <div class="column">
+                <img src="tradicion.jpg" alt="Tradiciones Día de Muertos">
+            </div>
+        </div>
+    </div>
+
+    <div id="calaveras" class="section">
+        <h2>Calaveras</h2>
+        <div class="content">
+            <div class="column">
+                <p>Las calaveras son símbolos de la muerte y se utilizan en decoraciones y como dulces durante la festividad.</p>
+            </div>
+            <div class="column">
+                <img src="cala.jpg" alt="Calaveras Día de Muertos">
+            </div>
+        </div>
+    </div>
+
+    <div id="celebracion" class="section">
+        <h2>Celebración</h2>
+        <div class="content">
+            <div class="column">
+                <p>El Día de Muertos se celebra el 1 y 2 de noviembre, uniendo a las familias para recordar y honrar a sus seres queridos.</p>
+            </div>
+            <div class="column">
+                <img src="cele.jpg" alt="Celebración Día de Muertos">
+            </div>
+        </div>
+    </div>
+
+    <div id="escalones" class="section">
+        <h2>Simbolismo de los Escalones</h2>
+        <div class="content">
+            <div class="column">
+                <p>
+                    La ofrenda tradicional suele tener varios escalones, cada uno con un significado:
+                    <ul>
+                        <li><strong>Primer escalón:</strong> Representa la tierra y la vida.</li>
+                        <li><strong>Segundo escalón:</strong> Simboliza el agua, esencial para la vida.</li>
+                        <li><strong>Tercer escalón:</strong> Representa el aire, el aliento de vida.</li>
+                        <li><strong>Cuarto escalón:</strong> Simboliza el fuego, que representa la transformación.</li>
+                        <li><strong>Quinto escalón:</strong> Representa el mundo de los muertos, donde se honra la memoria de los difuntos.</li>
+                    </ul>
+                </p>
+            </div>
+            <div class="column">
+                <img src="escalo.jpg" alt="Escalones Ofrenda Día de Muertos">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Iluminar el fondo
+        setInterval(() => {
+            document.body.style.backgroundColor = document.body.style.backgroundColor === 'rgb(255, 111, 0)' ? '#FF6F00' : '#FF6F00';
+        }, 1000);
+    </script>
+
+</body>
+</html>
